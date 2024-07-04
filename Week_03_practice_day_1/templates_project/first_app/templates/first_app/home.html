@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is home page</h1>
+
+    {% comment %} show value {% endcomment %}
+    <h3> Name:{{name}}<br>Id:{{id}}<br> Age:{{age}} </h3>
+
+    {% comment %} condition part {% endcomment %}
+    {% if age >= 20 %}
+        <p>You will get licence</p>
+    {% elif age > 10 %}
+        <p>You will not get licence</p>
+    {% else %}
+        <p>You are child</p>
+    {% endif %}
+    
+    {% comment %} loop part {% endcomment %}
+    {% for i in complete_course %}
+    <h4>{{i.id}} {{i.name}}</h4>
+    {% endfor %}
+
+    {% comment %} templates filtering {% endcomment %}
+    {% comment %} add filter {% endcomment %}
+    {{ age | add:"2" }} <br>
+
+    {% comment %} It is used to add slashes before quotes. Useful for escaping strings in CSV. Example {% endcomment %}
+    {{ "I'm Robiul" | addslashes }} <br>
+
+    {% comment %} {{ value | capfirst }} {% endcomment %}
+    {{ "allah" | capfirst }} <br>
+
+    {% comment %} It is used to remove all values of arg from the given string {% endcomment %}
+    {{"i am robiul islam." | cut:" "}} <br>
+
+    {% comment %} date filter {% endcomment %}
+    {{ brithday | date:"D d M Y" }} <br>
+
+    {% comment %} join {% endcomment %}
+    {{ list | join:"   " }}
+
+
+</body>
+</html>
