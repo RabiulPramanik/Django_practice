@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block contant_box %}
+
+    <div method='post' style="width:50%; margin:auto" >
+        {% if messages %}
+        {% for m in messages %}
+        <h3 class="text-{{m.tags}}"> {{m}} </h3>
+        {% endfor %}
+        {% endif %}
+    </div>
+
+    <div style="width:60%; margin:auto" class="text-center p-4">
+        <h2><a class="btn btn-danger" href="{% url "pass_with_page" %}">password change with old password </a> </h2>
+        <h2><a class="btn btn-warning" href="{% url "pass_without_page" %}">password change without old password </a> </h2>
+    </div>
+
+{% endblock contant_box %}

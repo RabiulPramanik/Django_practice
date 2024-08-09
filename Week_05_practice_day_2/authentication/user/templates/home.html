@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block contant_box %}
+  <div method='post' style="width:50%; margin:auto" >
+    {% if messages %}
+      {% for m in messages %}
+      <h3 class="text-{{m.tags}}"> {{m}} </h3>
+      {% endfor %}
+    {% endif %}
+  </div>
+{% endblock contant_box %}
