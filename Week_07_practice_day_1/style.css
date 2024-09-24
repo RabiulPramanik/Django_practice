@@ -1,0 +1,39 @@
+body{
+    width: 100%;
+}
+li{
+    list-style: none;
+}
+.menu{
+    font-size: 30px;
+}
+.menu:hover{
+    color: white;
+    cursor: pointer;
+}
+nav{
+    background: linear-gradient(66deg, #6ecadf -5.25%, #439FA5 46.76%, #4C7D8C 98.77%);
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgb(81, 80, 80);
+    text-align: center;
+}
+.main-container{
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    margin-top: 50PX;
+}
+.category{
+    align-items: center;
+    margin: auto;
+    padding: 20PX;
+
+}
+.products{
+    align-items: center;
+    margin: auto;
+    padding: 20PX;
+}
+.card-img{
+    height: 400px;
+}
